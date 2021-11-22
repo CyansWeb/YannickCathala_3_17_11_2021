@@ -1,0 +1,192 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+.menu__title__coeurs,
+.boutonchoix__check,
+.boutonchoix__check__icone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+    width: 100%;
+    color: black;
+    position: relative;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.header__logo {
+    font-family: 'Shrikhand', cursive;
+    margin: 0;
+    padding: 0;
+    font-size: 1.9rem;
+}
+
+.header__back {
+    position: absolute;
+    top: 37.5%;
+    left: 20px;
+    font-size: 1.1rem;
+    color: black;
+}
+
+.pic-resto {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+.menu {
+    width: 100%;
+    background-color: #eaeaea;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    margin-top: -50px;
+    padding-top: 10px;
+    padding-bottom: 35px;
+}
+
+.menu__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.menu__title__nom {
+    margin: 20px;
+    font-family: 'Shrikhand', cursive;
+    font-weight: 100;
+    font-size: 1.7rem;
+}
+
+.menu__title__coeurs {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.menu__title__coeurs--plein {
+    position: absolute;
+    background: linear-gradient(27deg, #FF79DA 0%, #9356DC 100%);
+    background-clip: text;
+    color: transparent;
+    visibility: hidden;
+}
+
+.menu__title__coeurs--vide {
+    position: absolute;
+    color: #595959;
+}
+
+.menu__title__coeurs:hover .menu__title__coeurs--vide {
+    visibility: hidden;
+}
+
+.menu__title__coeurs:hover .menu__title__coeurs--plein {
+    visibility: visible;
+    transform: scale(1);
+}
+
+.menu__etape__underline {
+    height: 4px;
+    width: 50px;
+    background-color: #99e2d0;
+    margin-top: 3px;
+}
+
+.menu__englobouton {
+    display: flex;
+    justify-content: center;
+}
+
+.menu__bouton {
+    background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
+    border-radius: 200px;
+    padding: 0px 20px;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    min-width: 135px;
+    text-align: center;
+    opacity: 0;
+}
+
+.menu__bouton:hover {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(175deg, #ff8de0 0%, #9e67e0 100%);
+}
+
+.boutonchoix {
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    margin-top: 15px;
+    overflow: hidden;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+.boutonchoix:hover .boutonchoix__check {
+    margin-right: 0;
+}
+
+.boutonchoix__texte {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.boutonchoix__texte--titre {
+    margin: 0 0 2px 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.boutonchoix__texte--complement {
+    margin: 0;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.boutonchoix__prix {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    font-weight: 500;
+}
