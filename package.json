@@ -1,0 +1,22 @@
+{
+    "name": "p3",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "sass": "sass --watch ./source/css/style.scss:public/css/style.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/CyansWeb/YannickCathala_3_17_11_2021.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/CyansWeb/YannickCathala_3_17_11_2021/issues"
+    },
+    "homepage": "https://github.com/CyansWeb/YannickCathala_3_17_11_2021#readme",
+    "dependencies": {
+        "sass": "^1.44.0"
+    }
+}
