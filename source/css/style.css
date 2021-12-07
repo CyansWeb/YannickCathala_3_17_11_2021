@@ -307,7 +307,7 @@ template {
 * {
   /*box sizing appliqué à tous les éléments*/
   box-sizing: border-box;
-  font-family: 'roboto', monospace,  sans-serif;
+  font-family: 'roboto', monospace, sans-serif;
   list-style-type: none;
   user-select: none; }
 
