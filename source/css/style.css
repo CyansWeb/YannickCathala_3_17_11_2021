@@ -591,7 +591,6 @@ body {
     box-shadow: 0 0 0 4px white, 0 0 0 7px rgba(221, 187, 0, 0.8); }
   80% {
     box-shadow: 0 0 0 11px #FFF, 0 0 4px 11px rgba(221, 187, 0, 0.8); } }
-/* taille du header et ombre bottom */
 header {
   height: 65px;
   text-align: center;
