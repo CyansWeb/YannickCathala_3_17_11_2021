@@ -1,0 +1,29 @@
+/* taille du header et ombre bottom */
+
+header {
+    @include header;
+    box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.279);
+    .return {
+        float: left;
+        margin-left: .6em;
+        right: 500px;
+        font-size: 1.8em;
+        &:hover i {
+            color: rgb(234, 7, 241);
+            position: relative;
+            animation: return .3s;
+        }
+    }
+}
+
+.loc-banner {
+    @include banner;
+    i {
+        margin-right: 10px;
+        margin-bottom: 6px;
+    }
+}
+
+.link-menu {
+    margin-left: -45px;
+}

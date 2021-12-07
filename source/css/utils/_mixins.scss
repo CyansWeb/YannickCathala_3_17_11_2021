@@ -1,38 +1,57 @@
-@mixin heading-shadow($colour:lightness-shift($colour-primary), $offset: $heading-shadow-size){
-    text-shadow: $offset $offset $colour;
+@mixin banner {
+    margin: 5px 0 0 0;
+    height: 53px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    row-gap: 10px;
+    background-color: $dark-grey;
 }
 
-@mixin border($colour:$colour-primary) {
-    border: .1rem solid $colour;
+@mixin header {
+    height: 65px;
+    text-align: center;
+    padding: 22px 0 48px 0;
 }
 
-@mixin img-ratio {
-    width: 100%;
-        display: block;
-        overflow: hidden;
-        padding-top: 56.25%;
-        position: relative;
-        & img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100%;
-            transform: translate(-50%, -50%);
-        }
+@mixin bouton-site {
+    padding: 18px 25px;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    background: $buttons-color;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-@mixin btn {
-    padding: $grid-gutter;
-    @include border;
-    color: $colour-primary;
-    background: $colour-secondary;
-    cursor: pointer;
-    &:hover{
-        background: $colour-primary;
-        color: $colour-accent;
+@mixin darken-txt {
+    color: darken($color-tertiary, 40%);
+}
+
+@mixin flex {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin footer {
+    background-color: $grisfonce;
+    color: white;
+    padding: 25px 25px;
+    &__links {
+        color: white;
+        display: flex;
+        flex-direction: row;
     }
-    &--full-width {
-        width: 100%;
-        margin: 0 auto;
+    &__texte {
+        margin-bottom: 10px;
+        &--titre {
+            font-family: 'Shrikhand', cursive;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+    }
+    &__logos {
+        font-size: 0.9rem;
+        margin-right: 10px;
     }
 }

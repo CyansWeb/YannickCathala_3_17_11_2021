@@ -2,140 +2,151 @@
 <html lang="fr">
 
 <head>
-    <!-- Métadonnées -->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Votre restaurant préféré à porter de main ! disponibles 24h /24h, 7 jours sur 7 par téléphone, ou par email." />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0">
 
-    <!-- GOOGLE FONT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet" />
-
-    <script defer src="https://kit.fontawesome.com/28e7a7a328.js" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="source/css/style.css" />
-    <!-- TITRE DE LA PAGE -->
     <title>OhMyFood</title>
+    <!--Favicon-->
+    <link rel="icon" href="images/favicon/favicon.ico">
+    <!--FontsAwesome icones-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <!--police  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet">
+
+    <!--style perso-->
+    <link type="text/css" rel="stylesheet" href="source/css/style.css">
 </head>
 
+<!--Loader-->
+
 <body>
+    <div class="waiting">
+        <span class="loader box loading"></span>
+    </div>
+
     <header>
-        <img src="source/images/logo/ohmyfood@2x.svg" alt="logo-ohmyfood">
+        <a class="link-menu" href="index.html"><img src="source/images/logo/ohmyfood@2x.svg" alt="logo-ohmyfood"></a>
     </header>
     <main>
+        <!-- bandeau avec icone de localisation-->
         <div class="loc-banner">
             <i class="fas fa-map-marker-alt"> </i> <span>Paris, Belleville</span>
         </div>
+        <!-- introduction-->
         <section class="intro">
-            <h2> Réservez le menu qui <br> vous convient</h2>
-            <p><span>Découvrez des restaurants d'éxception,</span>
-                <span>séléctionnés par nos soins</span></p>
-            <a href="#">Explorer nos restaurants</a>
+            <h1> Réservez le menu qui <br> vous convient</h1>
+            <p><span>Découvrez des restaurants d'exception,</span>
+                <span>sélectionnés par nos soins</span></p>
+            <a class="button" href="#explore">Explorer nos restaurants</a>
         </section>
-        <div class="fonctionnement">
+        <div class="main-wrapper">
+            <!-- fonctionnement -->
             <section class="process">
                 <h2>Fonctionnement</h2>
                 <div class="process-list">
-                    <p> <span>1</span>
+                    <p class="steps"> <span class="number">1</span>
                         <i class="fas fa-mobile-alt fa-lg"></i>Choisissez un restaurant
                     </p>
-                    <p> <span>2</span>
+                    <p class="steps"> <span class="number">2</span>
                         <i class="fas fa-list-ul fa-lg"></i>Composez votre menu
                     </p>
-                    <p> <span>3</span>
+                    <p class="steps"> <span class="number">3</span>
                         <i class="fas fa-store fa-lg "></i>Dégustez au restaurant
                     </p>
                 </div>
             </section>
-            <section class="resto">
-                <h2>Restaurants</h2>
-                <div class="resto-bloc">
-                    <div class="resto-col">
-                        <a class="resto-card" href="palette.html">
-                            <div class="resto-picture">
-                                <img class="resto-picture" src="source/images/restos/resto1.jpg" alt="">
-                                <div class="sticker">Nouveau</div>
-                            </div>
-                            <div class="card-food">
-                                <div class="resto-text">
-                                    <h4 class="resto-name"><strong>La palette du goût</strong></h4>
-                                    <span class="resto-loc">Ménilmontant</span>
+            <!--Cartes de l'index-->
+            <section class="resto" id="explore">
+                <div class="restoSect">
+                    <h2 id="tittleResto">Restaurants</h2>
+                    <div class="resto-wrapper">
+                        <div class="resto-col">
+                            <a class="resto-card" href="palette.html">
+                                <div class="resto-img">
+                                    <img class="resto-photo" src="source/images/restos/resto1.jpg" alt="">
+                                    <div class="sticker">Nouveau</div>
                                 </div>
-                                <div class="menu_title_heart">
-                                    <div class="menu_title_heart_empty"> <i class="far fa-heart"></i> </div>
-                                    <div class="menu_title_heart_full"> <i class="fas fa-heart"></i> </div>
+                                <footer class="card-footer">
+                                    <div class="resto-txt">
+                                        <h4 class="resto-name"><strong>La palette du goût</strong></h4>
+                                        <span class="resto-loc">Ménilmontant</span>
+                                    </div>
+                                    <div class="heart">
+                                        <i class="far fa-heart heart__anim--empty"></i>
+                                        <i class="far fa-heart heart__anim--mask"></i>
+                                    </div>
+                                </footer>
+                            </a>
+                            <a class="resto-card" href="note.html">
+                                <div class="resto-img">
+                                    <img class="resto-photo" src="source/images/restos/resto2.jpg" alt="">
+                                    <div class="sticker">Nouveau</div>
                                 </div>
-                            </div>
-                        </a>
-                        <a class="resto-card" href="note.html">
-                            <div class="resto-picture">
-                                <img class="resto-picture" src="source/images/restos/resto2.jpg" alt="">
-                                <div class="sticker">Nouveau</div>
-                            </div>
-                            <div class="card-food">
-                                <div class="resto-text">
-                                    <h4 class="resto-name"><strong>La note enchantée</strong></h4>
-                                    <span class="resto-loc">Charonne</span>
+                                <footer class="card-footer">
+                                    <div class="resto-txt">
+                                        <h4 class="resto-name"><strong>La note enchantée</strong></h4>
+                                        <span class="resto-loc">Charonne</span>
+                                    </div>
+                                    <div class="heart">
+                                        <i class="far fa-heart heart__anim--empty"></i>
+                                        <i class="far fa-heart heart__anim--mask"></i>
+                                    </div>
+                                </footer>
+                            </a>
+                        </div>
+                        <div class="resto-col">
+                            <a class="resto-card" href="francaise.html">
+                                <div class="resto-img">
+                                    <img class="resto-photo" src="source/images/restos/resto3.jpg" alt="">
                                 </div>
-                                <div class="menu_title_heart">
-                                    <div class="menu_title_heart_empty"> <i class="far fa-heart"></i> </div>
-                                    <div class="menu_title_heart_full"> <i class="fas fa-heart"></i> </div>
+                                <footer class="card-footer">
+                                    <div class="resto-txt">
+                                        <h4 class="resto-name"><strong>À la française</strong></h4>
+                                        <span class="resto-loc">Cité rouge</span>
+                                    </div>
+                                    <div class="heart">
+                                        <i class="far fa-heart heart__anim--empty"></i>
+                                        <i class="far fa-heart heart__anim--mask"></i>
+                                    </div>
+                                </footer>
+                            </a>
+                            <a class="resto-card" href="delice.html">
+                                <div class="resto-img">
+                                    <img class="resto-photo" src="source/images/restos/resto4.jpg" alt="">
                                 </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="resto-col">
-                        <a class="resto-card" href="francaise.html">
-                            <div class="resto-picture">
-                                <img class="resto-picture" src="source/images/restos/resto3.jpg" alt="">
-                            </div>
-                            <div class="card-food">
-                                <div class="resto-text">
-                                    <h4 class="resto-name"><strong>À la française</strong></h4>
-                                    <span class="resto-loc">Cité rouge</span>
-                                </div>
-                                <div class="menu_title_heart">
-                                    <div class="menu_title_heart_empty"> <i class="far fa-heart"></i> </div>
-                                    <div class="menu_title_heart_full"> <i class="fas fa-heart"></i> </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a class="resto-card" href="delice.html">
-                            <div class="resto-picture">
-                                <img class="resto-picture" src="source/images/restos/resto4.jpg" alt="">
-                            </div>
-                            <div class="card-food">
-                                <div class="resto-text">
-                                    <h4 class="resto-name"><strong>Le délice des sens</strong></h4>
-                                    <span class="resto-loc">Folie-Méricourt</span>
-                                </div>
-                                <div class="menu_title_heart">
-                                    <div class="menu_title_heart_empty"> <i class="far fa-heart"></i> </div>
-                                    <div class="menu_title_heart_full"> <i class="fas fa-heart"></i> </div>
-                                </div>
-                            </div>
-                        </a>
+                                <footer class="card-footer">
+                                    <div class="resto-txt">
+                                        <h4 class="resto-name"><strong>Le délice des sens</strong></h4>
+                                        <span class="resto-loc">Folie-Méricourt</span>
+                                    </div>
+                                    <div class="heart">
+                                        <i class="far fa-heart heart__anim--empty"></i>
+                                        <i class="far fa-heart heart__anim--mask"></i>
+                                    </div>
+                                </footer>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
         </div>
-
-        <footer class="footer">
-            <div class="footer_text footer_title">ohmyfood</div>
-            <div class="footer_link">
-                <a class="footer_links" href=""><i class="fas fa-utensils footer_logos"></i><div class="footer_text">Proposer un restaurant</div></a>
-                <a class="footer_links" href=""><i class="fas fa-hands-helping footer_logos"></i><div class="footer_text">Devenir partenaire</div></a>
-                <a class="footer_links" href="">
-                    <div class="footer_text">Mentions légales</div>
-                </a>
-                <a class="footer_links" href="mailto:contact@ohmyfood.fr">
-                    <div class="footer_text">Contact</div>
-                </a>
-            </div>
-        </footer>
     </main>
+    <footer class="footer">
+        <div class="footer__texte footer__texte--titre">ohmyfood</div>
+        <div class="footer__container">
+            <a class="footer__links" href=""><i class="fas fa-utensils footer__logos"></i><div class="footer__texte">Proposer un restaurant</div></a>
+            <a class="footer__links" href=""><i class="fas fa-hands-helping footer__logos"></i><div class="footer__texte">Devenir partenaire</div></a>
+            <a class="footer__links" href="">
+                <div class="footer__texte">Mentions légales</div>
+            </a>
+            <a class="footer__links" href="mailto:hello@ohmyfood.fr">
+                <div class="footer__texte">Contact</div>
+            </a>
+        </div>
+    </footer>
 </body>
 
 </html>

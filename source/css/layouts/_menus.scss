@@ -1,0 +1,168 @@
+.pic-resto {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.menu {
+    background-color: #F6F6F6;
+    border-radius: 50px 50px 0 0;
+    margin-top: -75px;
+    position: relative;
+    padding: 20px;
+    overflow: hidden;
+    .main__wrapper {
+        h2 {
+            font-family: 'shrikhand';
+            font-weight: 400;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            letter-spacing: 2px;
+            transition-duration: .5s;
+            transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+            span {
+                float: right;
+            }
+        }
+        .menu__wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: inherit;
+            .menu__type {
+                font-weight: 300;
+                margin-bottom: 7px;
+            }
+            .type__underline {
+                border: none;
+                width: 48px;
+                margin: 0 14px 14px 0;
+                height: 3px;
+                background-color: $color-tertiary;
+            }
+            .item {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                padding: 12px 20px 12px 18px;
+                margin: 14px 10px;
+                flex-wrap: nowrap;
+                max-height: 100px;
+                background-color: #FFFFFF;
+                cursor: pointer;
+                box-shadow: 2px 10px 47px 19px rgba(0, 0, 0, 0.1);
+                border-radius: 14px;
+                overflow: hidden;
+                &__txt {
+                    flex: 1;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    &--tittle {
+                        font-size: 20px;
+                        margin: 0;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    &--desc {
+                        margin: 5px 0 0 0;
+                        font-weight: 300;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+                &__price {
+                    font-weight: normal;
+                }
+                &__check {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 75px;
+                    background-color: $color-tertiary;
+                    margin: -12px -20px -12px 10px;
+                    flex-basis: 75px;
+                    max-width: 0px;
+                    transition-duration: 1s;
+                    transition-timing-function: cubic-bezier(0, 0, 0.76, 1.68);
+                    transition: max-width .4s;
+                    &--ico {
+                        color: #FFF;
+                        font-weight: bold;
+                        font-size: 1.5em;
+                        visibility: hidden;
+                    }
+                }
+                &:hover>.item__check {
+                    max-width: 75px;
+                    .item__check--ico {
+                        visibility: visible;
+                        transform: rotate(-360deg);
+                        transition: transform .4s ease-out;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ########################  ANIMATION INTRO MENUS  ###########################
+.zoomin1 {
+    animation: zoomin .8s .25s ease-in-out;
+    transform: scale(1);
+}
+
+.zoomin2 {
+    animation: zoomin .8s .5s ease-in-out;
+    transform: scale(1);
+}
+
+.zoomin3 {
+    animation: zoomin .8s .75s ease-in-out;
+    transform: scale(1);
+}
+
+@keyframes zoomin {
+    0% {
+        transform: scale(0);
+    }
+}
+
+
+/*placement bouton */
+
+.button__wrapper {
+    display: grid;
+    place-content: center;
+    padding: 25px 0 0 0;
+    .button {
+        padding: 15px 45px;
+    }
+}
+
+// ########################  MEDIA QUERIES  ###########################
+@media screen and (min-width: 1100px) {
+    .type__wrapper {
+        display: flex;
+        justify-content: center;
+    }
+    .menu>.main__wrapper>h2 {
+        justify-content: center;
+        gap: 50px;
+        font-size: 35px;
+    }
+    .type_plus_Underline {
+        margin-left: 12px;
+    }
+    .type__underline {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .item {
+        max-width: 340px;
+        min-width: 340px;
+    }
+}
