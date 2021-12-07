@@ -330,7 +330,7 @@ body {
   z-index: 2;
   background-color: #9b59b6;
   opacity: 0;
-  animation: loader 3s linear; }
+  animation: loader 5s linear; }
   .waiting .loader {
     height: 100px;
     width: 100px;
