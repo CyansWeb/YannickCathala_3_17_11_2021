@@ -6,6 +6,8 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -357,6 +359,7 @@ body {
   min-width: 373px;
 }
 
+/*Typographie*/
 .loader {
   position: fixed;
   top: 0;
