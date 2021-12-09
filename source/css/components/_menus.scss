@@ -108,25 +108,34 @@
 }
 
 // ########################  ANIMATION INTRO MENUS  ###########################
+@keyframes dishes {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/*----------  apparition progressive de plats avec assignation de leurs timings respectifs  ----------*/
+
 .zoomin1 {
-    animation: zoomin .8s .25s ease-in-out;
-    transform: scale(1);
+    animation: dishes 1s ease 0.3s 1 normal both;
 }
 
 .zoomin2 {
-    animation: zoomin .8s .5s ease-in-out;
-    transform: scale(1);
+    animation: dishes 1s ease 0.5s 1 normal both;
 }
 
 .zoomin3 {
-    animation: zoomin .8s .75s ease-in-out;
-    transform: scale(1);
+    animation: dishes 1s ease 0.7s 1 normal both;
 }
 
-@keyframes zoomin {
-    0% {
-        transform: scale(0);
-    }
+.zoomin4 {
+    animation: dishes 1s ease 0.9s 1 normal both;
 }
 
 

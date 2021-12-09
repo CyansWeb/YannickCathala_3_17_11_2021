@@ -844,7 +844,6 @@ header .return:hover i {
   column-gap: 20px;
   padding: 28px 40px 28px 0px;
   position: relative;
-  font-weight: normal;
   border-radius: 24px;
   font-weight: 500;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -1159,26 +1158,33 @@ header .return:hover i {
   transition: transform 0.4s ease-out;
 }
 
+@keyframes dishes {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*----------  apparition progressive de plats avec assignation de leurs timings respectifs  ----------*/
 .zoomin1 {
-  animation: zoomin 0.8s 0.25s ease-in-out;
-  transform: scale(1);
+  animation: dishes 1s ease 0.3s 1 normal both;
 }
 
 .zoomin2 {
-  animation: zoomin 0.8s 0.5s ease-in-out;
-  transform: scale(1);
+  animation: dishes 1s ease 0.5s 1 normal both;
 }
 
 .zoomin3 {
-  animation: zoomin 0.8s 0.75s ease-in-out;
-  transform: scale(1);
+  animation: dishes 1s ease 0.7s 1 normal both;
 }
 
-@keyframes zoomin {
-  0% {
-    transform: scale(0);
-  }
+.zoomin4 {
+  animation: dishes 1s ease 0.9s 1 normal both;
 }
+
 /*placement bouton */
 .button__wrapper {
   display: grid;
@@ -1215,49 +1221,33 @@ header .return:hover i {
     min-width: 340px;
   }
 }
-.fa-heart {
-  font-size: 25px;
-}
-
-.heart {
-  height: 45px;
-  width: 45px;
+.description_hearts {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+  cursor: pointer;
 }
-.heart__anim--mask {
+.description_hearts--heart {
   position: absolute;
+  font-size: 25px;
+  transition: all 500ms linear;
 }
-.heart:hover .heart__anim--mask {
-  font-weight: bold;
-  color: #9356DC;
-  animation: zoom 0.4s linear;
-  background: linear-gradient(346deg, #99e2d0 0%, #ff79da 20%, #9356dc 97%);
-  background-clip: text;
+.description_hearts--heart.empty {
+  opacity: 1;
+  color: black;
+}
+.description_hearts--heart.full {
+  opacity: 0;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
-  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
-@keyframes zoom {
-  0% {
-    transform: scale(0);
-  }
-  30% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(2);
-  }
-  70% {
-    transform: scale(3);
-  }
-  95% {
-    transform: scale(2);
-  }
-  100% {
-    transform: scale(1);
-  }
+.description_hearts:hover .description_hearts--heart.empty {
+  opacity: 0;
+}
+.description_hearts:hover .description_hearts--heart.full {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
