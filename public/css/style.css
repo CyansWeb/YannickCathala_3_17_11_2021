@@ -348,8 +348,8 @@ template {
   user-select: none;
 }
 
-/*tous les titres h1 ont la même font que le logo en shirkland*/
-/*pas de décoration sous les lien*/
+/*  tous les titres h1 ont la même font que le logo en shirkland    */
+/*  pas de décoration sous les lien */
 a {
   text-decoration: none;
   color: black;
@@ -359,7 +359,9 @@ body {
   min-width: 373px;
 }
 
-/*Typographie*/
+/*  Typographie */
+/*  Google Fonts    */
+/*  Font Family */
 .loader {
   position: fixed;
   top: 0;

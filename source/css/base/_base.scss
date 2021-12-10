@@ -7,10 +7,10 @@
 }
 
 
-/*tous les titres h1 ont la même font que le logo en shirkland*/
+/*  tous les titres h1 ont la même font que le logo en shirkland    */
 
 
-/*pas de décoration sous les lien*/
+/*  pas de décoration sous les lien */
 
 a {
     text-decoration: none;
@@ -22,12 +22,16 @@ body {
 }
 
 
-/*Typographie*/
+/*  Typographie */
 
-// Google font
+
+/*  Google Fonts    */
+
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
-// font-family
+
+/*  Font Family */
+
 $font-logo: "Shrikhand",
 cursive;
 $font-body: "Roboto",
